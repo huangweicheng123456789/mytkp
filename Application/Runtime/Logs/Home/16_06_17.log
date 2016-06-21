@@ -1,0 +1,285 @@
+[ 2016-06-17T10:00:42+08:00 ] 127.0.0.1 /myphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-06-17T10:03:38+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined offset: 0 D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\phpapp\myphp\Application\Home\Controller\ClassController.class.php on line 14 and defined D:\phpapp\myphp\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field D:\phpapp\myphp\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field D:\phpapp\myphp\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+NOTIC: [8] Undefined offset: 0 D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-06-17T10:10:18+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined offset: 0 D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [2] Missing argument 1 for Think\Model::field(), called in D:\phpapp\myphp\Application\Home\Controller\ClassController.class.php on line 14 and defined D:\phpapp\myphp\ThinkPHP\Library\Think\Model.class.php 第 1740 行.
+NOTIC: [8] Undefined variable: field D:\phpapp\myphp\ThinkPHP\Library\Think\Model.class.php 第 1741 行.
+NOTIC: [8] Undefined variable: field D:\phpapp\myphp\ThinkPHP\Library\Think\Model.class.php 第 1751 行.
+NOTIC: [8] Undefined offset: 0 D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-06-17T11:08:02+08:00 ] 127.0.0.1 /myphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-06-17T11:08:07+08:00 ] 127.0.0.1 /myphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2016-06-17T11:13:57+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'huang'@'localhost' (using password: YES)
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:103) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:103) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:14:57+08:00 ] 127.0.0.1 /myphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-06-17T11:15:52+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'huang'@'localhost' (using password: YES)
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:103) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:103) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:26:35+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:26:53+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:27:15+08:00 ] 127.0.0.1 /myphp/index.php/Home/Class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:27:51+08:00 ] 127.0.0.1 /myphp/index.php/Home/Class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:29:12+08:00 ] 127.0.0.1 /myphp/index.php/Home/Class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+ERR: 1046:No database selected
+ [ SQL语句 ] : SHOW COLUMNS FROM `class`
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 229 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\phpapp\myphp\ThinkPHP\Library\Think\Db\Driver.class.php:170) D:\phpapp\myphp\ThinkPHP\Library\Think\Think.class.php 第 230 行.
+
+[ 2016-06-17T11:30:51+08:00 ] 127.0.0.1 /myphp/index.php/Home/Class/loadAllclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.1260s ]
+SQL: SELECT * FROM `class`  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006001s ]
+
+[ 2016-06-17T11:42:26+08:00 ] 127.0.0.1 /myphp/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2016-06-17T11:42:51+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `class`  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2016-06-17T11:44:17+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `class`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-17T11:44:37+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `class`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-17T11:44:58+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `class`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-17T11:45:00+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `class` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `class`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-06-17T11:49:32+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `menu`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-06-17T11:50:10+08:00 ] 127.0.0.1 /myphp/index.php/Home/class/loadALLclass
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `tb_user` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `tb_user`  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+

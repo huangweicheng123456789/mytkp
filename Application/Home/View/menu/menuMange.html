@@ -1,0 +1,203 @@
+<?php 
+
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello worder</title>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="../../../../Public/easyui/themes/bootstrap/easyui.css"/>
+        <link type="text/css" rel="stylesheet" href="../../../../Public/easyui/themes/icon.css"/>
+        <script type="text/javascript" src="../../../../Public/easyui/jquery.min.js"></script>
+        <script type="text/javascript" src="../../../../Public/easyui/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="../../../../Public/easyui/locale/easyui-lang-zh_CN.js"></script>
+        <style type="text/css">
+            .in{
+	           width:200px;
+            }
+        </style>
+        <script type="text/javascript">
+        	$(function(){
+        		$('#win').window('close');  
+        		$('#dg').datagrid({	
+        			striped:true,
+            		method:"GET",        
+        			url:'http://localhost:8080/myphp/index.php/Home/Menu/loadMenuByPage?pageNo=1&pageSize=10',
+        			pagination:true,
+        			rownumbers:true,
+        			frozenColumns:[[
+        				{field:"AAAA",checkbox:true}
+        		    ]],
+        		 	columns:[[    
+        	           {field:'url',title:'路径',width:200,align:'center'},    
+        	           {field:'name',title:'菜单名称',width:200,align:'center'},    
+        	           {field:'parentid',title:'父级关系ID',width:200,align:'center'},
+        	           {field:'menuid',hidden:true,},    
+        	           {field:'isshow',title:'是否显示',width:200,align:'center'}
+        			]],
+        			toolbar: [{
+    					iconCls: 'icon-adduser',
+    					text:'添加菜单',
+    					handler: function(){
+    						$('#parentid').combobox({    
+    						    url:'../controller/main.phppageNo=1&pageSize=10&controller=MenuController&methodName=loadMenuByPage',    
+    						    valueField:'menuid',    
+    						    textField:'name'   
+    						}); 
+    						$('#win').window('open');  // open a window    
+    					}
+    				 },'-',{
+    					iconCls: 'icon-delete',
+    					text:"删除菜单",
+    					handler: function(){
+        					var selectedRows = $("#dg").datagrid("getSelections");
+        					if(selectedRows.length == 0){ 
+            					alert("请先选中行，再删除！");
+            					return;
+            				}
+            				if(window.confirm("你真的确定想删除当前数据吗？")){
+                				var menuids = new Array();
+                				for(var i=0;i<selectedRows.length;i++){
+                					menuids.push(selectedRows[i].menuid);
+                    			}
+                    			$.post("http://localhost:8080/myphp/index.php/Home/Menu/menuids",{
+                        			"menuids":menuids.jion(",")
+                    			},function(){
+                        			alert(data);
+                    				refreshData(1,10);
+                        		},"text");
+                			}
+        				}
+    				},'-',{
+    					iconCls: 'icon-refresh',
+    					text:"刷新",
+    					handler: function(){
+    						refreshData(1,10);
+        				}
+    				 },'-',{
+    					iconCls: 'icon-modify',
+    					text:'修改',
+    					handler: function(){
+    						var selectedRows = $("#dg").datagrid("getSelections");
+    						if(selectedRows.length == 0){
+    							alert("请先选中，再进行修改！");
+    							return;
+    						}
+    						if(selectedRows.length > 1){
+    							alert("你只能选中一项进行修改！");
+    							return;
+    						}
+    						//每次打开窗口前加载1 2级菜单作为父菜单下拉列表的选项
+    						$('#parentid2').combobox({
+    							url:'deal/loadMenu2.php',
+    							valueField:'menuid',
+    							textField:'name'
+    						});
+    						//获取当前选项的数据
+    						var row = selectedRows[0];
+    						//回填数据
+    						$.getJSON("http://localhost:8080/myphp/index.php/Home/Menu/menuid="+row.menuid,{},function(data){
+    							$("#menuid").val(data.menuid);
+    							$("#name").val(data.name);
+    							$("#url").val(data.url);
+    							$("#parentid").combobox("setValue",data.parentid);
+    							$("#isshow").combobox("setValue",data.isshow);
+    						});
+    						$("#win").window('open');
+    					} 
+    				}]
+        			        				
+        		});
+        		//设置翻阅功能
+        		var pager = $("#dg").datagrid("getPager");
+        		pager.pagination({
+        			onSelectPage:function(pageNumber, pageSize){
+        				refreshData(pageNumber,pageSize);
+        			}
+        		});
+        	});
+	
+				
+        	
+        	function saveorUpDateMenu(){
+				var name =$("#name").val();
+				var url =$("#url").val();
+				var parentid = $("#parentid").combo("getValue");
+				var isshow = $("#isshow").combo("getValue");
+				$.post("deal/addMenu.php",{
+					"name"	     : name,
+					"url"        : url,
+					"parentid"   : parentid,
+					"isshow"     : isshow 
+				},function(data){
+					if(data="insertok"){
+						$message.alert('消息','菜单添加成功');
+						refreshData(1,10);
+						$('#win').window('close');
+					}
+				},"text");
+        	}
+			function bbbb(){
+				var name =$("#name").val();
+				var url =$("#url").val();
+				var parentid = $("#parentid").combo("getValue");
+				var isshow = $("#isshow").combo("getValue");
+				var menuid = $("#menuid").val();
+			}
+			
+        	
+        	//刷新表格数据
+        	function refreshData(pageNumber, pageSize){
+				$("#dg").datagrid('loading');
+				$.getJSON("http://localhost:8080/myphp/index.php/Home/Menu/pageNo="+pageNumber+"&pageSize="+pageSize,{},function(result){
+					$("#dg").datagrid('loadData',{
+						rows: result.rows,
+						total:result.total
+					});
+    			var pager = $("#dg").datagrid("getPager");
+    				pager.pagination({
+    					pageNumber:pageNumber,
+    					pageSize:pageSize
+    				});
+    				$("#dg").datagrid('loaded');
+				});	
+			}
+        </script>
+    </head>
+    <body>
+	    <table id="dg"></table>
+	    <div id="win" class="easyui-window" title="添加菜单" style="width:600px;height:400px"   
+    		data-options="iconCls:'icon-adduser',modal:true,collapsible:false,maximizable:false">   
+	 		<form id="ff" method="post"> 
+    		 	<table id="secoundtable" style="width:60%;margin:auto;margin-top:20px">
+    		 		<tr>
+    		 			<td align="right"><label for="name">菜单名称:</label></td>
+    		 			<td><input class="easyui-validatebox in" type="text" id="name" name="name" data-options="required:true" placeholder="请输入菜单名称"/></td>
+    		 		</tr>
+    		 		<tr>
+    		 			<td align="right"><label for="URL">菜单地址URL:</label></td>
+    		 			<td> <input class="easyui-validatebox in" type="text" id="URL" name="URL" data-options="" placeholder="请输入菜单地址URL"/></td>
+    		 		</tr>
+    		 		<tr>
+    		 			<td align="right"><label for="parentid">父级菜单:</label></td>
+    		 			<td><select id="parentid" class="in" name="parentid"></select></td>
+    		 		</tr>
+    		 		<tr>
+    		 			<td align="right"><label for="isshow">是否展示:</label></td>
+    		 			<td>
+    		 				<select id="isshow"class="easyui-combobox in" name="isshow">
+    		 					<option value="1">展示</option>
+    		 					<option value="0">不展示</option>
+    		 				</select>
+    		 			</td>
+    		 		</tr>
+    		 		<tr>
+    		 			<td align="right" colspan="2">
+    		 				<a id="btn" href="javascript:addMenu();" class="easyui-linkbutton" data-options="iconCls:'icon-submit'">确认提交</a>  
+    		 			</td>
+    		 		</tr>
+    	 		</table>
+            </form> 
+	    </div>  
+    </body>
+</html>

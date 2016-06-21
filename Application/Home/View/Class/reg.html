@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset='UTF-8'>
+	</head>
+	<body>
+		<p>reg模板</p>
+		{$ttt}<br/>
+		{$arr.0}-----{$arr[1]}<br/>
+		{$arr2.aa}-----{$arr2[bb]}<br/>
+		{$data.0.classid}----{$data[0][classname]}<br/>
+		{$menu:menuid}----{$menu->name}<br/>
+		{$Think.server.http_user_agent}<br/>
+		{$str|md5=###}<br/>
+		{$str|substr=0,3}------{$str|substr=###,0,3}<br/>
+		{:substr($str,0,4)}<br/>
+		{$str|default="中国你好！！！！"}<br/>
+		{$i+$j}-----{$i-$j}-----{$i*$j}-----{$i/$j}-----{$i%$j}-----{$i++}----{++$j}<br/>
+		{$i==4?"对":"错"}<br/>
+		
+		
+		<table border="1" bordercolor="red" width="100%" hight="500px" cellspacing="0">
+			<tr>
+				<td>编号</td>
+				<td>姓名</td>
+				<td>类型</td>
+				<td>备注</td>
+				<td>创建时间</td>
+				<td>开班时间</td>
+				<td>毕业时间</td>
+				<td>状态</td>
+				<td>班主任</td>
+				<td>项目经理</td>
+				<td>人数</td>
+			</tr>
+			<!--  
+			<volist name="data" id="class" mod="2" empty="$msg" key="i">
+				<eq name="mod" value="0">
+					<tr style="background-color:red;">
+						<td>{$class.classid}</td>
+						<td>{$class.classname}</td>
+						<td>
+							<if condition="$class.classtype eq 1">常规班
+							<elseif condition="$class.classtype eq 2"/>快速班
+							<elseif condition="$class.classtype eq 3"/>flish班
+							<else/>php班
+							</if>
+						</td>
+						<td>{$class.remarks}</td>
+						<td>{$class.estatime}</td>
+						<td>{$class.starttime}</td>
+						<td>{$class.gradtime }</td>
+						<td>{$class.status}</td>
+						<td>{$class.headmaster}</td>
+						<td>{$class.projectmanager}</td>
+						<td>{$class.porson}</td>
+					</tr>
+				</eq>
+				<eq name="mod" value="1">
+					<tr style="background-color:blue;">
+						<td>{$class.classid}</td>
+						<td>{$class.classname}</td>
+						<td>
+							<if condition="$class.classtype eq 1">常规班
+							<elseif condition="$class.classtype eq 2"/>快速班
+							<elseif condition="$class.classtype eq 3"/>flish班
+							<else/>php班
+							</if>
+						</td>
+						<td>{$class.remarks}</td>
+						<td>{$class.estatime}</td>
+						<td>{$class.starttime}</td>
+						<td>{$class.gradtime }</td>
+						<td>{$class.status}</td>
+						<td>{$class.headmaster}</td>
+						<td>{$class.projectmanager}</td>
+						<td>{$class.porson}</td>
+					</tr>
+				</eq>
+			</volist>
+			-->
+			<foreach name="data" item="class" key="i">
+				<eq name="i%2" value="0">
+					<tr style="background-color:green;">
+						<td>{$class.classid}</td>
+						<td>{$class.classname}</td>
+						<td>
+							<if condition="$class.classtype eq 1">常规班
+							<elseif condition="$class.classtype eq 2"/>快速班
+							<elseif condition="$class.classtype eq 3"/>flish班
+							<else/>php班
+							</if>
+						</td>
+						<td>{$class.remarks}</td>
+						<td>{$class.estatime}</td>
+						<td>{$class.starttime}</td>
+						<td>{$class.gradtime }</td>
+						<td>{$class.status}</td>
+						<td>{$class.headmaster}</td>
+						<td>{$class.projectmanager}</td>
+						<td>{$class.porson}</td>
+					</tr>
+				</eq>
+				<eq name="i%2" value="1">
+					<tr style="background-color:orange;">
+						<td>{$class.classid}</td>
+						<td>{$class.classname}</td>
+						<td>
+							<if condition="$class.classtype eq 1">常规班
+							<elseif condition="$class.classtype eq 2"/>快速班
+							<elseif condition="$class.classtype eq 3"/>flish班
+							<else/>php班
+							</if>
+						</td>
+						<td>{$class.remarks}</td>
+						<td>{$class.estatime}</td>
+						<td>{$class.starttime}</td>
+						<td>{$class.gradtime }</td>
+						<td>{$class.status}</td>
+						<td>{$class.headmaster}</td>
+						<td>{$class.projectmanager}</td>
+						<td>{$class.porson}</td>
+					</tr>
+				</eq>
+			</foreach> 
+			
+			<!--<for start="$arrayLenth-1" end="0" comparison="elt" name="i">
+			<for start="0" end="$arrayLenth" comparison="lt" name="i">
+				<eq name="i%2" value="0">
+					<tr style="background-color:blue;">
+						<td>{$data.$i.classid}</td>
+						<td>{$data.$i.classname}</td>
+						<td>{$data.$i.classtype}</td>
+						<td>{$data.$i.remarks}</td>
+						<td>{$data.$i.estatime}</td>
+						<td>{$data.$i.starttime}</td>
+						<td>{$data.$i.gradtime }</td>
+						<td>{$data.$i.status}</td>
+						<td>{$data.$i.headmaster}</td>
+						<td>{$data.$i.projectmanager}</td>
+						<td>{$data.$i.porson}</td>
+					</tr>
+				</eq>
+				<eq name="i%2" value="1">
+					<tr style="background-color:yellow;">
+						<td>{$data.$i.classid}</td>
+						<td>{$data.$i.classname}</td>
+						<td>{$data.$i.classtype}</td>
+						<td>{$data.$i.remarks}</td>
+						<td>{$data.$i.estatime}</td>
+						<td>{$data.$i.starttime}</td>
+						<td>{$data.$i.gradtime}</td>
+						<td>{$data.$i.status}</td>
+						<td>{$data.$i.headmaster}</td>
+						<td>{$data.$i.projectmanager}</td>
+						<td>{$data.$i.porson}</td>
+					</tr>
+				</eq>
+			</for>-->
+		</table>
+		<switch name="j">
+			<case value="1"></case>
+			<case value="2"></case>
+			<case value="3"></case>
+			<case value="4"></case>
+			<case value="5"></case>
+			<case value="6"></case>
+			<case value="7"></case>
+			<defult>其他</defult>
+		</switch>
+		<br/>
+		<if condition="$j eq 3">哈哈哈哈哈哈哈</if>
+		
+		
+		<if condition="$j eq 3">
+			恭喜你 ，答对了！！！
+		<else/>
+			很遗憾你答错了！！
+		</if>
+		
+		
+		<if condition="$j eq 3">
+			恭喜你 ，答对了！！！
+		<elseif condition="$j eq 3"/>
+			很遗憾你答错了！！
+		</if>
+	</body>
+</html>

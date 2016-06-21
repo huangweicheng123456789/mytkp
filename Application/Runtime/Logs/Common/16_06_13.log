@@ -1,0 +1,54 @@
+[ 2016-06-13T14:24:22+08:00 ] 127.0.0.1 /myphp/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.002000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010001s ]
+ERR: 无法加载模块:Login
+
+[ 2016-06-13T14:25:39+08:00 ] 127.0.0.1 /myphp/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Login
+
+[ 2016-06-13T14:26:29+08:00 ] 127.0.0.1 /myphp/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Login
+
+[ 2016-06-13T14:29:25+08:00 ] 127.0.0.1 /myphp/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Login
+
+[ 2016-06-13T14:36:09+08:00 ] 127.0.0.1 /myphp/index.php/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Login
+
+[ 2016-06-13T14:49:36+08:00 ] 127.0.0.1 /myphp/index.php/ttt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Ttt
+
+[ 2016-06-13T14:49:42+08:00 ] 127.0.0.1 /myphp/index.php/ttt/123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+ERR: 无法加载模块:Ttt
+
+[ 2016-06-13T14:50:15+08:00 ] 127.0.0.1 /myphp/index.php/ttt/admin/123456
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+ERR: 无法加载模块:Ttt
+
+[ 2016-06-13T14:57:59+08:00 ] 127.0.0.1 /myphp/index.php/ttt/admin/123321
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+ERR: 无法加载模块:Ttt
+
