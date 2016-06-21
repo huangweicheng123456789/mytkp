@@ -6,18 +6,18 @@
     <head>
         <title>班级管理表</title>
         <meta charset="utf-8">
-        <link type="text/css" rel="stylesheet" href="http://localhost:8080/myphp/Public/easyui/themes/bootstrap/easyui.css"/>
-        <link type="text/css" rel="stylesheet" href="http://localhost:8080/myphp/Public/easyui/themes/icon.css"/>
-        <script type="text/javascript" src="http://localhost:8080/myphp/Public/easyui/jquery.min.js"></script>
-        <script type="text/javascript" src="http://localhost:8080/myphp/Public/easyui/jquery.easyui.min.js"></script>
-        <script type="text/javascript" src="http://localhost:8080/myphp/Public/easyui/locale/easyui-lang-zh_CN.js"></script>
+        <link type="text/css" rel="stylesheet" href="http://localhost:8080/mytkp/Public/easyui/themes/bootstrap/easyui.css"/>
+        <link type="text/css" rel="stylesheet" href="http://localhost:8080/mytkp/Public/easyui/themes/icon.css"/>
+        <script type="text/javascript" src="http://localhost:8080/mytkp/Public/easyui/jquery.min.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/mytkp/Public/easyui/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/mytkp/Public/easyui/locale/easyui-lang-zh_CN.js"></script>
         <script type="text/javascript">
         	$(function(){
         		$('#win').window('close');  
         		$('#dg').datagrid({	
         			striped:true,
             		method:"GET",        
-        			url:'http://localhost:8080/myphp/index.php/Home/Class/loadClassByPage?pageNo=1&pageSize=10',
+        			url:'http://localhost:8080/mytkp/index.php/Home/Class/loadClassByPage?pageNo=1&pageSize=10',
         			pagination:true,
         			rownumbers:true,
         			frozenColumns:[[
@@ -91,7 +91,7 @@
         	//刷新表格数据
         	function refreshData(pageNumber, pageSize){
         		$("#dg").datagrid('loading');
-				$.getJSON("http://localhost:8080/myphp/index.php/Home/Class/loadClassByPage?pageNo="+pageNumber+"&pageSize="+pageSize,{},function(result){
+				$.getJSON("http://localhost:8080/mytkp/index.php/Home/Class/loadClassByPage?pageNo="+pageNumber+"&pageSize="+pageSize,{},function(result){
 					$("#dg").datagrid('loadData',{
 						rows: result.rows,
 						total:result.total
@@ -106,7 +106,7 @@
         	}	
 			//搜索班级
 			function searchClass(){
-				$.post("http://localhost:8080/myphp/index.php/Home/Class/loadClassByPage",{
+				$.post("http://localhost:8080/mytkp/index.php/Home/Class/loadClassByPage",{
 					'pageNo'           : 1,
 					'pageSize'         : 10,
 					'className'	       : $("#search-className").val(),
@@ -160,7 +160,7 @@
 					cids.push(selectedRows[i].classid);
 					options.push({"name":selectedRows[i].classname,"classid":selectedRows[i].classid});
 				}
-				$.post("http://localhost:8080/myphp/index.php/Home/Class/checkExamToday",{"cids":cids.join(",")},function(data){
+				$.post("http://localhost:8080/mytkp/index.php/Home/Class/checkExamToday",{"cids":cids.join(",")},function(data){
 					if(data == "ok"){
 						//根据已选中的数据动态填入合并后班级名选项
 						$("#combinedClassid").combobox({
@@ -171,14 +171,14 @@
 						});
 						//ajax载入班主任选项
 						$("#combinedHeaderid").combobox({
-							url        : "http://localhost:8080/myphp/index.php/Home/User/loadAllHeader",
+							url        : "http://localhost:8080/mytkp/index.php/Home/User/loadAllHeader",
 							valueField : 'uid',
 							textField  : 'truename',
 							value     :'-1'
 						});
 						//ajax载入班项目经理选项
 						$("#combinedManagerid").combobox({
-							url        : "http://localhost:8080/myphp/index.php/Home/User/loadAllMenger",
+							url        : "http://localhost:8080/mytkp/index.php/Home/User/loadAllMenger",
 							valueField : 'uid',
 							textField  : 'truename',
 							value     :'-1'
@@ -199,7 +199,7 @@
 				for(var i=0;i<selectedRows.length;i++){
 					cids.push(selectedRows[i].classid);
 				}
-				$.post("http://localhost:8080/myphp/index.php/Home/Class/hebingClasses",{
+				$.post("http://localhost:8080/mytkp/index.php/Home/Class/hebingClasses",{
 					"cids"              :cids.join(","),
 					"combinedClassid"   :$("#combinedClassid").combo("getValue"),
 					"combinedHeaderid"  :$("#combinedHeaderid").combo("getValue"),

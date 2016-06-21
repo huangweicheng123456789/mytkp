@@ -1,7 +1,7 @@
 <?php
 return array(
 	//'配置项'=>'配置值'
-	
+	'ROOT'=>"http://localhost:8080/mytkp/",
     //关于数据库访问的配置
 //     "DSN"=>"mysql:host=localhost;dbname=u20",
 //     "DBUSER"=>"root",

@@ -30,13 +30,13 @@ class UserController extends Controller{
              $uid = $_SESSION["loginUser"][0];
              $secondMenu = $this->menuModel->loadTreeMenu($uid);
              $_SESSION["secondMenu"] = $secondMenu;
-             header("location:http://localhost:8080/myphp/welcome.php");
+             header("location:".C("ROOT")."welcome.php");
          }else if ($i == 2) {
              $_SESSION["loginError"] = "用户名不存在！";
-             header("location:http://localhost:8080/myphp/login.php");
+             header("location:".C("ROOT")."login.php");
          }else{
              $_SESSION["loginError"] = "密码错误！";
-             header("location:http://localhost:8080/myphp/login.php");
+             header("location:".C("ROOT")."login.php");
         }
         
          

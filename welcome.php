@@ -11,11 +11,11 @@ session_start();
 	<head>
 		<title>欢迎界面</title>
 		<meta charset="utf-8">
-		<link type="text/css" rel="stylesheet" href="http://localhost:8080/myphp/Public/easyui/themes/bootstrap/easyui.css"/>
-		<link type="text/css" rel="stylesheet" href="http://localhost:8080/myphp/Public/easyui/themes/icon.css"/>
-		<script type="text/javascript" src="http://localhost:8080/myphp/Public/easyui/jquery.min.js"></script>
-		<script type="text/javascript" src="http://localhost:8080/myphp/Public/easyui/jquery.easyui.min.js"></script>
-		<script type="text/javascript" src="http://localhost:8080/myphp/Public/easyui/locale/easyui-lang-zh_CN.js"></script>
+		<link type="text/css" rel="stylesheet" href="http://localhost:8080/mytkp/Public/easyui/themes/bootstrap/easyui.css"/>
+		<link type="text/css" rel="stylesheet" href="http://localhost:8080/mytkp/Public/easyui/themes/icon.css"/>
+		<script type="text/javascript" src="http://localhost:8080/mytkp/Public/easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="http://localhost:8080/mytkp/Public/easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="http://localhost:8080/mytkp/Public/easyui/locale/easyui-lang-zh_CN.js"></script>
 		<script type="text/javascript">
 		function addTabs(url,name){
 			if($("#tabs").tabs("exists",name)){

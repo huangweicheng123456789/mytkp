@@ -22,7 +22,7 @@
         		$('#dg').datagrid({	
         			striped:true,
             		method:"GET",        
-        			url:'http://localhost:8080/myphp/index.php/Home/Menu/loadMenuByPage?pageNo=1&pageSize=10',
+        			url:'http://localhost:8080/mytkp/index.php/Home/Menu/loadMenuByPage?pageNo=1&pageSize=10',
         			pagination:true,
         			rownumbers:true,
         			frozenColumns:[[
@@ -60,7 +60,7 @@
                 				for(var i=0;i<selectedRows.length;i++){
                 					menuids.push(selectedRows[i].menuid);
                     			}
-                    			$.post("http://localhost:8080/myphp/index.php/Home/Menu/menuids",{
+                    			$.post("http://localhost:8080/mytkp/index.php/Home/Menu/menuids",{
                         			"menuids":menuids.jion(",")
                     			},function(){
                         			alert(data);
@@ -96,7 +96,7 @@
     						//获取当前选项的数据
     						var row = selectedRows[0];
     						//回填数据
-    						$.getJSON("http://localhost:8080/myphp/index.php/Home/Menu/menuid="+row.menuid,{},function(data){
+    						$.getJSON("http://localhost:8080/mytkp/index.php/Home/Menu/menuid="+row.menuid,{},function(data){
     							$("#menuid").val(data.menuid);
     							$("#name").val(data.name);
     							$("#url").val(data.url);
@@ -149,7 +149,7 @@
         	//刷新表格数据
         	function refreshData(pageNumber, pageSize){
 				$("#dg").datagrid('loading');
-				$.getJSON("http://localhost:8080/myphp/index.php/Home/Menu/pageNo="+pageNumber+"&pageSize="+pageSize,{},function(result){
+				$.getJSON("http://localhost:8080/mytkp/index.php/Home/Menu/pageNo="+pageNumber+"&pageSize="+pageSize,{},function(result){
 					$("#dg").datagrid('loadData',{
 						rows: result.rows,
 						total:result.total
